@@ -12,7 +12,10 @@ Cat::Cat(std::string type) {
   _brain = new Brain();
 }
 
-Cat::~Cat() { std::cout << _type << "(Cat): Destructor called" << std::endl; }
+Cat::~Cat() {
+	std::cout << _type << "(Cat): Destructor called" << std::endl;
+	delete _brain;
+}
 
 Cat &Cat::operator=(const Cat &other) {
   std::cout << "Cat: Copy Assignment Operator called" << std::endl;
@@ -24,8 +27,8 @@ Cat &Cat::operator=(const Cat &other) {
 
 Cat::Cat(const Cat &other) : Animal(other) {
   std::cout << "Cat: Copy Constructor called" << std::endl;
+  this->_brain = new Brain(*other._brain);
   this->_type = other._type;
-  *this = other;
 }
 
 void Cat::makeSound() const {

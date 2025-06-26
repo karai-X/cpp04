@@ -21,6 +21,7 @@ Animal &Animal::operator=(const Animal &other) {
 Animal::Animal(const Animal &other) {
   std::cout << "Animal: Copy Constructor called" << std::endl;
   this->_type = other._type;
+  *this = other;
 }
 
 void Animal::makeSound() const{

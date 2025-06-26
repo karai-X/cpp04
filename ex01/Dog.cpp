@@ -12,20 +12,23 @@ Dog::Dog(std::string type) {
   _brain = new Brain();
 }
 
-Dog::~Dog() { std::cout << _type << "(Dog): Destructor called" << std::endl; }
+Dog::~Dog() {
+	std::cout << _type << "(Dog): Destructor called" << std::endl;
+	delete _brain;
+}
 
 Dog &Dog::operator=(const Dog &other) {
   std::cout << "Dog: Copy Assignment Operator called" << std::endl;
   this->_type = other._type;
   delete this->_brain;
-  this->_brain = new Brain(*(other._brain));
+  this->_brain = new Brain(*other._brain);
   return *this;
 }
 
 Dog::Dog(const Dog &other) : Animal(other) {
   std::cout << "Dog: Copy Constructor called" << std::endl;
+  this->_brain = new Brain(*other._brain);
   this->_type = other._type;
-  *this = other;
 }
 
 void Dog::makeSound() const {
