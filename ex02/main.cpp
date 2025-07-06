@@ -30,5 +30,10 @@ int main() {
 			delete animals[i];
 		}
 	}
+	std::cout << std::endl;
+	std::cout << "====check abstruct class====" << std::endl;
+	{
+		// Animal a; //Animal cannot be instantiated
+	}
 	return 0;
 }
