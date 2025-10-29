@@ -2,7 +2,7 @@
 
 WrongAnimal::WrongAnimal() {
   std::cout << "WrongAnimal: default Constructor called" << std::endl;
-  _type = "Nanashi";
+  _type = "Wrong_Animal";
 }
 
 WrongAnimal::WrongAnimal(std::string type) {

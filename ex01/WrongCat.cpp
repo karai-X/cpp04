@@ -2,7 +2,7 @@
 
 WrongCat::WrongCat() {
   std::cout << "WrongCat: default Constructor called" << std::endl;
-  _type = "Nanashi";
+  _type = "Wrong_Cat";
 }
 
 WrongCat::WrongCat(std::string type) {

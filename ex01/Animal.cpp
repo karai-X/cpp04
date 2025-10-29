@@ -2,7 +2,7 @@
 
 Animal::Animal() {
   std::cout << "Animal: default Constructor called" << std::endl;
-  _type = "Nanashi";
+  _type = "Animal";
 }
 
 Animal::Animal(std::string type) {

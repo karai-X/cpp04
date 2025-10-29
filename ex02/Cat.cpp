@@ -2,7 +2,7 @@
 
 Cat::Cat() {
   std::cout << "Cat: default Constructor called" << std::endl;
-  _type = "Nanashi";
+  _type = "Cat";
   _brain = new Brain();
 }
 

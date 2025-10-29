@@ -2,7 +2,7 @@
 
 Dog::Dog() {
   std::cout << "Dog: default Constructor called" << std::endl;
-  _type = "Nanashi";
+  _type = "Dog";
   _brain = new Brain();
 }
 
